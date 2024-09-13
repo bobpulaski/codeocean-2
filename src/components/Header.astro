@@ -1,0 +1,60 @@
+---
+
+---
+
+<header
+  class="container bg-[#fffbeb] md:rounded-[16px] sticky top-2 bg-opacity-85 backdrop-blur-sm p-2"
+>
+  <nav class="flex justify-between items-center p-4">
+    <div class="navbar-brand">
+      <a href="#" class="text-xl font-bold">CodeOcean</a>
+    </div>
+
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">Features</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">Pricing</a>
+    </div>
+
+    <button id="burger" class="md:hidden focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <div
+    id="menu"
+    class="md:hidden hidden w-full blur-bg p-4 shadow-lg fixed top-16 left-0 z-10"
+  >
+    <a href="#" class="block text-gray-700 hover:text-blue-500">Home</a>
+    <a href="#" class="block text-gray-700 hover:text-blue-500">Features</a>
+    <a href="#" class="block text-gray-700 hover:text-blue-500">Pricing</a>
+  </div>
+</header>
+
+<style>
+  .blur-bg {
+    backdrop-filter: blur(10px);
+    background-color: #fffbeb; /* светло-желтый с прозрачностью */
+  }
+</style>
+
+<script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
